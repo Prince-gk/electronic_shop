@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Prince Electronics Online Store</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link href="css/styles.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="bg-primary text-white py-4 mb-4">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-6">
+						<h1 class="mb-0">Prince Electronics Online Store</h1>
+					</div>
+					<div class="col-md-6">
+						<form class="d-flex" id="search-form">
+							<input
+								class="form-control me-2"
+								type="search"
+								placeholder="Search"
+								aria-label="Search"
+								id="search-input" />
+							<button
+								class="btn btn-outline-light"
+								type="submit"
+								id="search-button">
+								Search
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<section id="product-list" class="mb-4">
+						<h2 class="mb-3">New Products</h2>
+						<div
+							class="row row-cols-1 row-cols-md-3 g-4"
+							id="product-grid"></div>
+					</section>
+				</div>
+				<div class="col-lg-4">
+					<aside id="cart" class="bg-light p-4 rounded shadow-sm">
+						<h2 class="mb-3">Shopping Cart</h2>
+						<ul id="cart-items" class="list-unstyled"></ul>
+						<div class="d-flex justify-content-between align-items-center mb-3">
+							<span class="h5">Total:</span>
+							<span class="h5" id="cart-total">Ksh.0.00</span>
+						</div>
+						<button
+							onclick="alert('Generating invoice...')"
+							id="place-order-button"
+							class="btn btn-success w-100">
+							Place Order
+						</button>
+					</aside>
+				</div>
+			</div>
+
+			<section id="add-product" class="bg-white p-4 rounded shadow-sm mb-4">
+				<h2 class="mb-3">Add New Product</h2>
+				<form id="add-product-form">
+					<div class="mb-3">
+						<label for="product-name" class="form-label">Name:</label>
+						<input
+							type="text"
+							class="form-control"
+							id="product-name"
+							required />
+					</div>
+					<div class="mb-3">
+						<label for="product-price" class="form-label">Price:</label>
+						<input
+							type="number"
+							class="form-control"
+							id="product-price"
+							step="0.01"
+							required />
+					</div>
+					<div class="mb-3">
+						<label for="product-description" class="form-label"
+							>Description:</label
+						>
+						<textarea
+							class="form-control"
+							id="product-description"
+							rows="3"
+							required></textarea>
+					</div>
+					<div class="mb-3">
+						<label for="product-image" class="form-label">Image:</label>
+						<input
+							type="file"
+							class="form-control"
+							id="product-image"
+							required />
+					</div>
+					<div class="mb-3">
+						<label for="product-store" class="form-label">Store:</label>
+						<select class="form-select" id="product-store" required></select>
+					</div>
+					<button type="submit" class="btn btn-primary">Add Product</button>
+				</form>
+			</section>
+
+			<section id="add-store" class="bg-white p-4 rounded shadow-sm mb-4">
+				<h2 class="mb-3">Add New Store</h2>
+				<form id="add-store-form">
+					<div class="mb-3">
+						<label for="store-name" class="form-label">Name:</label>
+						<input type="text" class="form-control" id="store-name" required />
+					</div>
+					<div class="mb-3">
+						<label for="store-location" class="form-label">Location:</label>
+						<input
+							type="text"
+							class="form-control"
+							id="store-location"
+							required />
+					</div>
+					<button type="submit" class="btn btn-primary">Add Store</button>
+				</form>
+			</section>
+
+			<section id="order-history" class="bg-white p-4 rounded shadow-sm mb-4">
+				<h2 class="mb-3">Order History</h2>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Order ID</th>
+							<th>Date</th>
+							<th>Total</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody id="order-history-list"></tbody>
+				</table>
+			</section>
+		</main>
+
+		<footer class="bg-dark text-white py-4 mt-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h3>Contact Us</h3>
+						<p>Email: info@princeelectronicsstore.com</p>
+						<p>Phone: +254712345678</p>
+					</div>
+					<div class="col-md-6">
+						<h3>Follow Us</h3>
+						<div class="d-flex">
+							<a href="#" class="text-white me-3"
+								><i class="fab fa-facebook-f"></i
+							></a>
+							<a href="#" class="text-white me-3"
+								><i class="fab fa-twitter"></i
+							></a>
+							<a href="#" class="text-white"
+								><i class="fab fa-instagram"></i
+							></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+		<script src="js/product.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
