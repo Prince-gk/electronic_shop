@@ -83,7 +83,9 @@ class Store {
 
 	async fetchProducts() {
 		try {
-			const response = await fetch('http://localhost:3000/products');
+			const response = await fetch(
+				'https://electronic-shop-gvkm.onrender.com/products'
+			);
 			const data = await response.json();
 			this.products = data.map(
 				(item) =>
@@ -108,7 +110,9 @@ class Store {
 
 	async fetchStores() {
 		try {
-			const response = await fetch('http://localhost:3000/stores');
+			const response = await fetch(
+				'https://electronic-shop-gvkm.onrender.com/stores'
+			);
 			this.stores = await response.json();
 			this.storeMap = new Map(
 				this.stores.map((store) => [store.id, store.name])
@@ -141,7 +145,7 @@ class Store {
 
 		try {
 			const response = await fetch(
-				`http://localhost:3000/products/${productId}`,
+				`https://electronic-shop-gvkm.onrender.com/products/${productId}`,
 				{
 					method: 'DELETE',
 				}
@@ -224,13 +228,16 @@ class Store {
 				product.image = reader.result;
 
 				try {
-					const response = await fetch('http://localhost:3000/products', {
-						method: 'POST',
-						headers: {
-							'Content-Type': 'application/json',
-						},
-						body: JSON.stringify(product),
-					});
+					const response = await fetch(
+						'https://electronic-shop-gvkm.onrender.com/products',
+						{
+							method: 'POST',
+							headers: {
+								'Content-Type': 'application/json',
+							},
+							body: JSON.stringify(product),
+						}
+					);
 					const newProduct = await response.json();
 					this.products.push(
 						new Product(
@@ -270,13 +277,16 @@ class Store {
 
 	async addStore(store) {
 		try {
-			const response = await fetch('http://localhost:3000/stores', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(store),
-			});
+			const response = await fetch(
+				'https://electronic-shop-gvkm.onrender.com/stores',
+				{
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify(store),
+				}
+			);
 			const newStore = await response.json();
 			this.stores.push(newStore);
 			this.storeMap.set(newStore.id, newStore.name);

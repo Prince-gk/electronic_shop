@@ -8,6 +8,12 @@
 - Bootstrap
 - json-server
 
+## Live Demo:
+
+https://electronic-shop-gvkm.onrender.com/
+
+
+
 ## Installation:
 
 Ensure you have `node` and `npm` installed on your machine. Clone the repository and run the following commands:
@@ -45,7 +51,7 @@ npm run start
 curl http://localhost:3000/
 ```
 
-6. Finnally, open the `index.html` file in your browser.
+6. Finally, open the `index.html` file in your browser.
 
 ## Description:
 
