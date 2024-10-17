@@ -1,0 +1,42 @@
+{
+  "stores": [
+    {
+      "id": 1,
+      "name": "TechZone",
+      "location": "New York"
+    },
+    {
+      "id": 2,
+      "name": "ElectroMart",
+      "location": "Los Angeles"
+    },
+    {
+      "id": 3,
+      "name": "GadgetWorld",
+      "location": "Chicago"
+    },
+    {
+      "name": "Testing",
+      "location": "Test",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 2,
+      "name": "Laptop Pro",
+      "price": 1299.99,
+      "description": "High-performance laptop for professionals",
+      "image": "https://www.phoneplacekenya.com/wp-content/uploads/2023/01/iPhone-15-Pro-Max.jpg",
+      "storeId": 2
+    },
+    {
+      "id": 5,
+      "name": "Gaming Console",
+      "price": 499.99,
+      "description": "Next-gen gaming console with 4K graphics",
+      "image": "https://www.phoneplacekenya.com/wp-content/uploads/2023/01/iPhone-15-Pro-Max.jpg",
+      "storeId": 2
+    }
+  ]
+}

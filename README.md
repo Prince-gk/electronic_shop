@@ -18,7 +18,7 @@ _The node version should be v16_
 1. Clone the repository:
 
 ```bash
-git clone
+git clone https://github.com/Prince-gk/electronic_shop.git --depth 1 && cd electronic_shop
 ```
 
 2. Install the dependencies:
@@ -39,8 +39,16 @@ npm install -g json-server
 npm run start
 ```
 
+5. Test if it's running:
+
+```bash
+curl http://localhost:3000/
+```
+
+6. Finnally, open the `index.html` file in your browser.
+
 ## Description:
 
-```
+An electronic shop that displays a list of products and allows users to add products to the cart. The cart is stored in the local storage and the user can remove products from the cart.
 
-```
+Phase 1 final project for the [JavaScript course]
