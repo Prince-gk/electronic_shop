@@ -52,7 +52,8 @@ curl http://localhost:3000/
 ```
 
 6. Finally, open the `index.html` file in your browser.
-
+  
+8. video link  https://drive.google.com/file/d/1z6vEKpz6F8JY9AF9B1rBs1Xha6gaeqYX/view?usp=sharing
 ## Description:
 
 An electronic shop that displays a list of products and allows users to add products to the cart. The cart is stored in the local storage and the user can remove products from the cart.
